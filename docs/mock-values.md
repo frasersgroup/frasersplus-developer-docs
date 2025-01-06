@@ -3,8 +3,6 @@ title: Mock & Magic Values
 permalink: /mock-values/
 ---
 
-## Mock API & “Magic Values”
-
 To facilitate development and unit testing, the following “magic values” can be used to influence a specific response when using the mock API as specified in the Swagger.
 
 Authentication  
