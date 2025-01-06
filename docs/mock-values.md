@@ -1,6 +1,5 @@
 ---
 title: Mock
-permalink: /mock-values/
 ---
 
 To facilitate development and unit testing, the following “magic values” can be used to influence a specific response when using the mock API as specified in the Swagger.

@@ -1,6 +1,5 @@
 ---
 title: Home
-permalink: /
 ---
 
 <div style="display:none;">
