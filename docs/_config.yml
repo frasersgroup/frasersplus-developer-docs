@@ -11,6 +11,11 @@ google_analytics: G-HKSPFBEBQH
 # Theme
 theme: minima # You can replace this with other supported themes
 
+minima:
+  header_pages:
+    - pay.md
+    - loyalty.md
+
 # Markdown settings
 markdown: kramdown
 kramdown:
