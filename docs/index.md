@@ -491,14 +491,10 @@ The current Merchant Fascia onboarding is based on **2** main **pillars**:
 
 #### **To be returned to the Merchant by Tymit**
 
-| **Requirement** | **Description**                                                                                                                                                             | **Examples**             |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| API Key         | API key that will be used by the fascia of the merchant to communicate with Tymit v2 Payment platform                                                                       | q95WmxWu90Kelx3fNsLk1N4L |
-|                 |                                                                                                                                                                             | 0m93ue5pe9mp30u5rjv      |
-|                 |                                                                                                                                                                             | k8gpoj7xrxn9q9hfpl4      |
-| Store ID        | Identifier which will be needed to be used by the fascia of the merchant to communicate with Tymit v2 Payment Platform, and identify the identity with the provided API Key | MerchantstoreWz39t       |
-|                 |                                                                                                                                                                             | MerchantdirectT2p9l      |
-|                 |                                                                                                                                                                             | Merchandland93cv         |
+| **Requirement** | **Description**                                                                                                                                                             | **Examples**                                                       |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| API Key         | API key that will be used by the fascia of the merchant to communicate with Tymit v2 Payment platform                                                                       | q95WmxWu90Kelx3fNsLk1N4L, 0m93ue5pe9mp30u5rjv, k8gpoj7xrxn9q9hfpl4 |
+| Store ID        | Identifier which will be needed to be used by the fascia of the merchant to communicate with Tymit v2 Payment Platform, and identify the identity with the provided API Key | MerchantstoreWz39t, MerchantdirectT2p9l, Merchandland93cv          |
 
 #### Exchange of sensitive information
 
