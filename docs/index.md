@@ -1,6 +1,6 @@
-![]
+<-- Frasers Plus Docs -->
 
-# Frasers Plus - Partnerships Integration Handbook - V1.3.1
+# Frasers Plus - Partnerships Integration Handbook
 
 | Contents                                                              |
 | --------------------------------------------------------------------- |
