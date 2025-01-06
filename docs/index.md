@@ -7,65 +7,35 @@ V1.3.1
 Contents
 
 [Document Version Control](#document-version-control)
-
 [Introduction](#introduction)
-
 [Stakeholders Clients and Systems](#stakeholders-clients-and-systems)
-
 [Payment Integration](#payment-integration)
-
 [Business Flows](#business-flows)
-
 [E-commerce Payment](#e-commerce-payment)
-
 [In-store Payment (POS)](#in-store-payment-pos)
-
 [API Integrations](#api-integrations)
-
 [E-commerce Payment API](#e-commerce-payment-api)
-
 [POS Payment API](#pos-payment-api)
-
 [Mock API & “Magic Values”](#mock-api--magic-values)
-
 [Full Sequence diagrams](#full-sequence-diagrams)
-
 [E-comm flows](#e-comm-flows)
-
 [POS Flow](#pos-flow)
-
 [Merchant Registration/Onboarding](#merchant-registrationonboarding)
-
 [Onboard Merchant Fascia](#onboard-merchant-fascia)
-
 [Security summary](#security-summary)
-
 [Webhook security](#webhook-security)
-
 [Authentication Type](#authentication-type)
-
 [How to Test an Integration](#how-to-test-an-integration)
-
 [Development/Unit Testing](#developmentunit-testing)
-
 [Staging](#staging)
-
 [How to Promote to Production](#how-to-promote-to-production)
-
 [Loyalty Integration](#loyalty-integration)
-
 [Business Flows](#business-flows-1)
-
 [Tracking Purchases](#tracking-purchases)
-
 [Reward Redemption](#reward-redemption)
-
 [API Integration](#api-integration)
-
 [Reward Redemption API](#reward-redemption-api)
-
 [Appendices](#appendices)
-
 [Glossary of Terms](#glossary-of-terms)
 
 # Document Version Control
