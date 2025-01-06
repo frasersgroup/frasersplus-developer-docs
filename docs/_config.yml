@@ -9,7 +9,7 @@ url: "https://frasersgroup.github.io/frasersplus-developer-docs/" # Your GitHub 
 google_analytics: G-HKSPFBEBQH
 
 # Theme
-remote_theme: "jekyll/minima"
+remote_theme: jekyll/minima
 #theme: minima # You can replace this with other supported themes
 
 minima:
