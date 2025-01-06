@@ -6,17 +6,16 @@ author: Frasers Group Financial Services
 url: "https://frasersgroup.github.io/frasersplus-developer-docs/" # Your GitHub Pages URL
 
 # Theme
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 theme: minima # You can replace this with other supported themes
 
 # Markdown settings
 markdown: kramdown
 kramdown:
   input: GFM # GitHub Flavored Markdown
-
-# Plugins (optional, add more as needed)
-plugins:
-  #  - jekyll-feed # For RSS feed support
-  - jekyll-seo-tag # For better SEO
 
 # Navigation bar (Minima theme supports this)
 # Add links to other pages on your site or external sites
