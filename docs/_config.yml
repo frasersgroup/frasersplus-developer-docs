@@ -15,7 +15,6 @@ remote_theme: jekyll/minima
 
 minima:
   header_pages:
-    - index.md
     - pay.md
     - loyalty.md
     - mock-values.md
