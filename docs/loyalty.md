@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Loyalty
+title: Loyalty Integration
 permalink: /loyalty/
 ---
-
-# Loyalty Integration
 
 ## Business Flows
 

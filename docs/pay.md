@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Pay
+title: Payment Integration
 permalink: /pay/
 ---
-
-# Payment Integration
 
 The following sections describe and demonstrate the user flows and integration mechanisms with the **Frasers Plus** payment system.
 
