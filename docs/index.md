@@ -1,9 +1,3 @@
----
-layout: default
-title: Home
-permalink: /
----
-
 # Frasers Plus - Partnerships Integration Handbook
 
 | Contents                                                              |
