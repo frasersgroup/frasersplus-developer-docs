@@ -1,3 +1,7 @@
+<div style="display:none;">
+  This text will be hidden using inline CSS.
+</div>
+
 # Frasers Plus - Partnerships Integration Handbook
 
 | Contents                                                              |
