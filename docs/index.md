@@ -216,7 +216,7 @@ Endpoint: POST to https://{merchant-domain}/{merchant_authorization_endpoint}
   "type": "AUTHORIZATION",
   "status": "APPROVED",
   "paymentAmount": {
-    "amount": 100.00,
+    "amount": 100.0,
     "currency": "GBP"
   },
   "actionDate": "2022-02-22T22:10:47.720Z",
@@ -244,7 +244,7 @@ Given the asynchronous nature of this communication, Merchants must not expect w
 
 _\* If webhooks are not enabled, it is strongly advised to “poll” the GET endpoint during the authorisation process to identify when a customer has responded to the authorisation approval request in the Frasers Plus app. This mitigates the risk that the customer chooses not to return to the hosted payment page (and subsequently the merchant site) following the in app approval resulting in the funds being authorised, but no order being placed._
 
-#### **PUT /**payment** (CAPTURE)
+#### **PUT /**payment\*\* (CAPTURE)
 
 REVERSAL and CAPTURE are exclusive, only one can happen after AUTHORIZATION.
 
@@ -580,7 +580,7 @@ To integrate your merchant operations with Frasers Plus Loyalty, it's important 
 
 To calculate Frasers Plus Loyalty points the merchant must provide Frasers Plus transaction data from the Ecommerce and Retail environments to the Loyalty backend. Loyalty backend will associate the transaction to the customer and calculate points which will be passed back to the Frasers Plus backend to update the Frasers Plus app with the current pending points balance.
 
-![](b5e53686f4f8b75f1659f5696be01598.jpeg)
+![](assets/images/b5e53686f4f8b75f1659f5696be01598.jpeg)
 
 ### Reward Redemption
 
@@ -588,13 +588,13 @@ To calculate Frasers Plus Loyalty points the merchant must provide Frasers Plus 
 
 Where the customer chooses to pay with a Frasers Plus Reward the customer enters their Reward identifier and PIN code, the Merchant Backend requests to Loyalty Reward redemption authorisation endpoint. The merchant backend will receive a http response code and payload including relevant information. At this stage the payment has been authorised and the funds ringfenced. Subsequent endpoints would be called from the merchant backend for capture, void or refund flows, further detail in the [API Integration section](#_API_Integration).
 
-![](fa4a94bd2eca5dbdb10e13c897e52d96.jpg)GET
+![](assets/images/fa4a94bd2eca5dbdb10e13c897e52d96.jpg)GET
 
 #### Physical Stores (POS) Redemption
 
 Where the customer chooses to pay with a Frasers Plus Reward the customer scans their Reward identifier, the Merchant Backend or direct from POS (alternate flow) requests to Loyalty Reward redemption authorisation/capture endpoint. The merchant backend/POS will receive a http response code and payload including relevant information. At this stage the payment has been authorised and captured. Subsequent endpoints would be called from the merchant backend/POS for refund flow, further detail in the [API Integration section](#_API_Integration).
 
-![](33e5da879cb90b4a4172839490a3667b.png)
+![](assets/images/33e5da879cb90b4a4172839490a3667b.png)
 
 ### API Integration
 
