@@ -5,6 +5,9 @@ author: Frasers Group Financial Services
 #baseurl: "/my-site" # The repository name (optional, remove if not needed)
 url: "https://frasersgroup.github.io/frasersplus-developer-docs/" # Your GitHub Pages URL
 
+# Google Analytics
+google_analytics: G-HKSPFBEBQH
+
 # Theme
 remote_theme: jekyll/minima
 plugins:
@@ -19,13 +22,9 @@ kramdown:
 
 # Navigation bar (Minima theme supports this)
 # Add links to other pages on your site or external sites
-nav:
-  - title: "Home"
-    url: /
-  - title: "Pay"
-    url: /pay/
-  - title: "Loyalty"
-    url: /loyalty/
+header_pages:
+  - pay.md
+  - loyalty.md
 
 # Exclude certain files or folders from being included in the site
 exclude:
