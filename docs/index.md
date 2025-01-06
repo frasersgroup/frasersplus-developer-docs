@@ -128,88 +128,53 @@ From user experience, this happens when the customer clicks on pay the basket wi
 
 **Endpoint:** POST to https://{environment-url}/v1/payment (more details in the API documentation).
 
-Example payload:
-
 ```json
 {
   "paymentId": "09900022030372702871537096",
-
   "type": "AUTHORIZATION",
-
   "method": "ONLINE",
-
   "mcc": "2017",
-
   "customer": {
     "id": "eff1ee72-88e6-11ec-a8a3-0242ac120002",
-
     "firstName": "Joe",
-
     "lastName": "Doe",
-
     "phone": "+441234567890",
-
     "email": "joe.doe@email.com",
-
     "billingAddress": {
       "city": "San Francisco",
-
       "country": "US",
-
       "line1": "123 Main Street",
-
       "line2": "",
-
       "postalCode": "94111",
-
       "state": "CA",
-
       "region": ""
     },
-
     "deliveryAddress": {
       "city": "San Francisco",
-
       "country": "US",
-
       "line1": "123 Main Street",
-
       "line2": "",
-
       "postalCode": "94111",
-
       "state": "CA",
-
       "region": ""
     }
   },
-
   "merchant": {
     "id": "f41201ea-88e6-11ec-a8a3-0242ac120002",
-
     "name": "Merchant Name",
-
     "redirectUrl": "https://example.com",
-
     "metadata": {
       "optionalField1": "optionalValue1"
     }
   },
-
   "avs": false,
-
   "description": "Cycle Mitts, Tyre Repair Kit, Bike",
-
   "paymentAmount": {
     "amount": 500.89,
-
     "currency": "GBP"
   },
-
   "expiresAt": "2022-02-22T22:10:47.720Z",
-
   "basketTimestamp": "2022-02-22T22:00:47.720Z",
-
   "metadata": {
     "optionalField1": "optionalValue1"
   }
@@ -226,53 +191,40 @@ Example payload:
 
 Regarding the response, it will contain _UPT_ and a _URL_:
 
+```json
 {
-
-"uniquePaymentReference": "f41201ea-00e6-11ec-a8a3-987654321098",
-
-"redirectUrl": "https://application.pay.frasers.plus/checkout/redirect?sessionId=f41201ea-00e6-11ec-a8a3-987654321098"s
-
+  "uniquePaymentReference": "f41201ea-00e6-11ec-a8a3-987654321098",
+  "redirectUrl": "https://application.pay.frasers.plus/checkout/redirect?sessionId=f41201ea-00e6-11ec-a8a3-987654321098"
 }
+```
 
 Merchants backend system should do the following:
 
 - Store UPT linked to the paymentId for further Payment details verification process.
 
-- Send the URL to the _Merchant e-commerce Web_ so customer browser can be redirected to that URL. That is in fact the **Frasers Plus HPP**.
+- Send the URL to the _Merchant e-commerce Web_ so customer browser can be redirected to that URL. That is in fact the **Frasers Plus HPP.**
 
-#### **Authori**zation **webhook**
+#### **Authorization** **webhook**
 
 If configured (\*), Frasers Plus backend system will call a webhook API endpoint exposed by the Merchant Backend, with the result of the Payment Authorization.
 
 Endpoint: POST to https://{merchant-domain}/{merchant_authorization_endpoint}
 
-Example of payload:
-
+```json
 {
-
-"uniquePaymentReference": "f41201ea-00e6-11ec-a8a3-987654321098",
-
-"type": "AUTHORIZATION",
-
-"status": "APPROVED",
-
-"paymentAmount": {
-
-"amount": 100.00,
-
-"currency": "GBP"
-
-},
-
-"actionDate": "2022-02-22T22:10:47.720Z",
-
-"metadata": {
-
-"merchantReference": "12344-45566"
-
+  "uniquePaymentReference": "f41201ea-00e6-11ec-a8a3-987654321098",
+  "type": "AUTHORIZATION",
+  "status": "APPROVED",
+  "paymentAmount": {
+    "amount": 100.00,
+    "currency": "GBP"
+  },
+  "actionDate": "2022-02-22T22:10:47.720Z",
+  "metadata": {
+    "merchantReference": "12344-45566"
+  }
 }
-
-}
+```
 
 status field value will be: “APPROVED” or “DECLINED”.
 
@@ -292,7 +244,7 @@ Given the asynchronous nature of this communication, Merchants must not expect w
 
 _\* If webhooks are not enabled, it is strongly advised to “poll” the GET endpoint during the authorisation process to identify when a customer has responded to the authorisation approval request in the Frasers Plus app. This mitigates the risk that the customer chooses not to return to the hosted payment page (and subsequently the merchant site) following the in app approval resulting in the funds being authorised, but no order being placed._
 
-#### **![](29602a3e7bc0f5c3f4318dcdf587f93f.png)**PUT /**payment** (CAPTURE)
+#### **PUT /**payment** (CAPTURE)
 
 REVERSAL and CAPTURE are exclusive, only one can happen after AUTHORIZATION.
 
@@ -300,21 +252,15 @@ It is the second step in e-commerce payment after the payment is APPROVED. Once 
 
 **Endpoint:** PUT to https://{environment-url}/v1/payment/{uniquePaymentReference} (more details in the API documentation).
 
-Example of payload:
-
+```json
 {
-
-"type": "CAPTURE",
-
-"paymentAmount": {
-
-"amount": 500.89,
-
-"currency": "GBP"
-
+  "type": "CAPTURE",
+  "paymentAmount": {
+    "amount": 500.89,
+    "currency": "GBP"
+  }
 }
-
-}
+```
 
 ![](1cdcb132c0ce2041ae1ef494285eb1a2.tmp)
 
@@ -330,21 +276,15 @@ It is the next step after an _APPROVED_ authorization when the e-commerce needs 
 
 **Endpoint:** PUT to https://{environment-url}/v1/payment/{uniquePaymentReference} (more details in the API documentation).
 
-Example of payload:
-
+```json
 {
-
-"type": "REVERSAL",
-
-"paymentAmount": {
-
-"amount": 500.89,
-
-"currency": "GBP"
-
+  "type": "REVERSAL",
+  "paymentAmount": {
+    "amount": 500.89,
+    "currency": "GBP"
+  }
 }
-
-}
+```
 
 #### **PUT /payment (CREDIT)**
 
@@ -356,21 +296,15 @@ It is the next step after _CAPTURE_ when the customer returns some goods therefo
 
 **Endpoint:** PUT to https://{environment-url}/v1/payment/{uniquePaymentReference} (more details in the API documentation).
 
-Example of payload:
-
+```json
 {
-
-"type": "CREDIT",
-
-"paymentAmount": {
-
-"amount": 500.89,
-
-"currency": "GBP"
-
+  "type": "CREDIT",
+  "paymentAmount": {
+    "amount": 500.89,
+    "currency": "GBP"
+  }
 }
-
-}
+```
 
 #### GET /payment/
 
@@ -386,41 +320,27 @@ _Get_ **flow could be used to get full details of a payment at any point. Main u
 
 **Example of response payload for a Payment with Authorization approved, not yet captured or reversed:**
 
-**{**
+```json
+{
+  "type": "AUTHORIZATION",
+  "status": "APPROVED",
+  "history": [
+    {
+      "type": "AUTHORIZATION",
+      "paymentAmount": {
+        "amount": 500.89,
+        "currency": "GBP"
+      },
+      "actionDate": "2022-02-22T22:10:47.720Z",
+      "metadata": {
+        "paymentId": "09900022030372702871537096"
+      }
+    }
+  ]
+}
+```
 
-**"type": "AUTHORIZATION",**
-
-**"status": "APPROVED",**
-
-**"history": [**
-
-**{**
-
-**"type": "AUTHORIZATION",**
-
-**"paymentAmount": {**
-
-**"amount": 500.89,**
-
-**"currency": "GBP"**
-
-**},**
-
-**"actionDate": "2022-02-22T22:10:47.720Z",**
-
-**"metadata": {**
-
-**"paymentId": "09900022030372702871537096"**
-
-**}**
-
-**}**
-
-**]**
-
-**}**
-
-**See section Mock API & “Magic Values” for more details.**
+See section Mock API & “Magic Values” for more details.
 
 ### **POS Payment API**
 
@@ -780,19 +700,17 @@ API documentation → [TBC](https://app.swaggerhub.com/apis/tymit/Tymit-cobrands
 
 **Endpoint URL:** POST <https://brand.external.frasers.plus/redeem/v1/authorize>
 
-Example Payload
-
+```json
 {
-
-"loyaltyId": "A1B2C3D4E5",  
- "pin": "1111",  
- "fascia": "FLAN",  
- "storeId": "1234",  
- "orderId": "FLAN40000012345678",  
- "currency": "GBP",  
- "redemptionAmount": 1.23
-
+  "loyaltyId": "A1B2C3D4E5",
+  "pin": "1111",
+  "fascia": "FLAN",
+  "storeId": "1234",
+  "orderId": "FLAN40000012345678",
+  "currency": "GBP",
+  "redemptionAmount": 1.23
 }
+```
 
 #### POST/redeem (CAPTURE): The Capture endpoint in the Frasers Plus Loyalty API is the second step in the Reward payment process. This step is initiated when the Merchant warehouse confirms that the goods are ready to be sent to the customer. The Merchant requests payment capture by sending a POST request to the loyalty endpoint.
 
@@ -800,12 +718,12 @@ Example Payload
 
 **Endpoint URL:** POST <https://brand.external.frasers.plus/redeem/v1/capture>
 
-Example Payload
-
-{  
- "token": "3ZDKCbGXK3FGtscnX",  
- "amount": 1.23  
+```json
+{
+  "token": "3ZDKCbGXK3FGtscnX",
+  "amount": 1.23
 }
+```
 
 **POST/redeem (VOID):** It is the next step after an _ACCEPTED_ authorisation when the e-commerce needs to cancel the purchase, for instance if the product is no longer available in the warehouse. Once the Merchant Backend confirms that the goods cannot be sent to the customer, it requests to Loyalty endpoint again. As a result of this, the reward balance will be cancelled and show as an available Reward on the customer account.
 
@@ -813,11 +731,11 @@ Example Payload
 
 **Endpoint URL:** POST <https://brand.external.frasers.plus/redeem/v1/void>
 
-Example Payload
-
-{  
- "token": "3ZDKCbGXK3FGtscnX"  
+```json
+{
+  "token": "3ZDKCbGXK3FGtscnX"
 }
+```
 
 #### **POST/redeem (REFUND):** It is the next step after CAPTURE when the customer returns some goods therefore customer reward needs to be amended. Once the Merchant Backend confirms that the goods have been returned, it requests to Loyalty endpoint again. As a result of this, the purchase will be shown as _returned_ in customer bill, and the available reward will be visible on the customer account.
 
@@ -825,12 +743,12 @@ Example Payload
 
 **Endpoint URL:** POST <https://brand.external.frasers.plus/redeem/v1/refund>
 
-Example Payload
-
-{  
- "token": "3ZDKCbGXK3FGtscnX",  
- "amount": 1.23  
+```json
+{
+  "token": "3ZDKCbGXK3FGtscnX",
+  "amount": 1.23
 }
+```
 
 #### Physical Stores (POS) Reward Redemption
 
@@ -840,17 +758,17 @@ Example Payload
 
 **Endpoint URL:** POST <https://brand.external.frasers.plus/redeem/v1/authCapture>
 
-Example payload:
-
-{  
- "loyaltyId": "A1B2C3D4E5",  
- "pin": "1111",  
- "fascia": "FLAN",  
- "storeId": "1234",  
- "orderId": "FLAN40000012345678",  
- "currency": "GBP",  
- "redemptionAmount": 1.23  
+```json
+{
+  "loyaltyId": "A1B2C3D4E5",
+  "pin": "1111",
+  "fascia": "FLAN",
+  "storeId": "1234",
+  "orderId": "FLAN40000012345678",
+  "currency": "GBP",
+  "redemptionAmount": 1.23
 }
+```
 
 # Appendices
 
