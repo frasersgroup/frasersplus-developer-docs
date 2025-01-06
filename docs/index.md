@@ -1,5 +1,11 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
 <div style="display:none;">
-  This text will be hidden using inline CSS.
+  Frasers plus developer documentation
 </div>
 
 # Frasers Plus - Partnerships Integration Handbook
