@@ -482,18 +482,12 @@ The current Merchant Fascia onboarding is based on **2** main **pillars**:
 
 #### **To be provided by the Merchant to Tymit**
 
-| **Requirement**                              | **Description**                                                                                                                                                                                                                                                                                     | **Examples**   |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| Merchant Sensitive Information contact email | The merchant will require to share an admin email of the group to which the relevant sensitive information will be shared back. The information needs to be provided in an email format to: ![(blue star)](c1dab8f89a00d91d6046f6ab2680594a.tmp)[**platform@tymit.com**](mailto:platform@tymit.com) |                |
-| Merchant Platform Outgoing IPs               | Merchant IP in order to whitelist on Frasers Plus platform firewalls.                                                                                                                                                                                                                               | _35.178.42.70_ |
-
-_3.121.132.125_
-
-_3.121.132.126_ |
-| Group Name | The Merchant Group name that holds the onboarding of the new fascia. Usually a Merchant group can hold up the N fascias or on the other hand the Group Name can be the fascia it self. | _Frasers Group_ |
-| Fascia Name | The Fascia name of the company to be onboarded; this is mainly the brand that will sell the products, usually a fascia belongs to a bigger group. | _Sports Direct_ |
-| | | _House of Fraser_ |
-| | | _Studio_ |
+| **Requirement**                              | **Description**                                                                                                                                                                                                                                                                                     | **Examples**                                     |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Merchant Sensitive Information contact email | The merchant will require to share an admin email of the group to which the relevant sensitive information will be shared back. The information needs to be provided in an email format to: ![(blue star)](c1dab8f89a00d91d6046f6ab2680594a.tmp)[**platform@tymit.com**](mailto:platform@tymit.com) |                                                  |
+| Merchant Platform Outgoing IPs               | Merchant IP in order to whitelist on Frasers Plus platform firewalls.                                                                                                                                                                                                                               | _35.178.42.70_, _3.121.132.125_, _3.121.132.126_ |
+| Group Name                                   | The Merchant Group name that holds the onboarding of the new fascia. Usually a Merchant group can hold up the N fascias or on the other hand the Group Name can be the fascia it self.                                                                                                              | _Frasers Group_                                  |
+| Fascia Name                                  | The Fascia name of the company to be onboarded; this is mainly the brand that will sell the products, usually a fascia belongs to a bigger group.                                                                                                                                                   | _Sports Direct_, _House of Fraser_, _Studio_     |
 
 #### **To be returned to the Merchant by Tymit**
 
