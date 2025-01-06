@@ -18,6 +18,7 @@ minima:
     - index.md
     - pay.md
     - loyalty.md
+    - mock-values.md
 
 # Markdown settings
 markdown: kramdown
