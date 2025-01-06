@@ -94,7 +94,7 @@ The customer is purchasing from the Merchant e-commerce. At some point they want
 
 ### In-store Payment (POS)
 
-![](assets/images/pay/in-store-payment.png)
+![](assets/images/pay/in-store-pos.png)
 
 The customer is purchasing In-Store. At some point they want to pay at the counter. Then there are 2 scenarios:
 
@@ -264,7 +264,7 @@ It is the second step in e-commerce payment after the payment is APPROVED. Once 
 }
 ```
 
-![](1cdcb132c0ce2041ae1ef494285eb1a2.tmp)
+![](/assets/images/pay/capture-flow.png)
 
 The following flows allows to return the credit to the customer if the initial purchase is somehow cancelled.
 
