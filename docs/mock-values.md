@@ -1,5 +1,5 @@
 ---
-title: Mock & Magic Values
+title: Mock
 permalink: /mock-values/
 ---
 
