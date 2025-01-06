@@ -10,10 +10,11 @@ google_analytics: G-HKSPFBEBQH
 
 # Theme
 remote_theme: jekyll/minima
+##theme: minima # You can replace this with other supported themes
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-##theme: minima # You can replace this with other supported themes
 
 # Markdown settings
 markdown: kramdown
@@ -30,10 +31,6 @@ header_pages:
 exclude:
   - README.md
   - LICENSE
-
-# Enable pagination for blog posts (if you have a `_posts` folder)
-paginate: 5
-paginate_path: "/blog/page:num/"
 
 # Deployment settings
 # Uncomment and configure if using a custom domain
