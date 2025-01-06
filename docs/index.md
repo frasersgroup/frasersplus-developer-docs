@@ -67,7 +67,7 @@ In this document you will find guides and API reference documentation to integra
 
 ![](3fad30ffa3a95c93049a3c2c5288641a.tmp)
 
-_A_ [_Glossary of Terms_](https://trysplit.atlassian.net/wiki/spaces/ECFP/pages/2891350221/Tymit+Integration+Handbook+-+Closeloop#Ubiquitous-Language) _is available at the end of this document._
+_A_ [_Glossary of Terms_](#glossary-of-terms) _is available at the end of this document._
 
 # Payment Integration
 
@@ -130,105 +130,91 @@ From user experience, this happens when the customer clicks on pay the basket wi
 
 Example payload:
 
+```json
 {
+  "paymentId": "09900022030372702871537096",
 
-"paymentId": "09900022030372702871537096",
+  "type": "AUTHORIZATION",
 
-"type": "AUTHORIZATION",
+  "method": "ONLINE",
 
-"method": "ONLINE",
+  "mcc": "2017",
 
-"mcc": "2017",
+  "customer": {
+    "id": "eff1ee72-88e6-11ec-a8a3-0242ac120002",
 
-"customer": {
+    "firstName": "Joe",
 
-"id": "eff1ee72-88e6-11ec-a8a3-0242ac120002",
+    "lastName": "Doe",
 
-"firstName": "Joe",
+    "phone": "+441234567890",
 
-"lastName": "Doe",
+    "email": "joe.doe@email.com",
 
-"phone": "+441234567890",
+    "billingAddress": {
+      "city": "San Francisco",
 
-"email": "joe.doe@email.com",
+      "country": "US",
 
-"billingAddress": {
+      "line1": "123 Main Street",
 
-"city": "San Francisco",
+      "line2": "",
 
-"country": "US",
+      "postalCode": "94111",
 
-"line1": "123 Main Street",
+      "state": "CA",
 
-"line2": "",
+      "region": ""
+    },
 
-"postalCode": "94111",
+    "deliveryAddress": {
+      "city": "San Francisco",
 
-"state": "CA",
+      "country": "US",
 
-"region": ""
+      "line1": "123 Main Street",
 
-},
+      "line2": "",
 
-"deliveryAddress": {
+      "postalCode": "94111",
 
-"city": "San Francisco",
+      "state": "CA",
 
-"country": "US",
+      "region": ""
+    }
+  },
 
-"line1": "123 Main Street",
+  "merchant": {
+    "id": "f41201ea-88e6-11ec-a8a3-0242ac120002",
 
-"line2": "",
+    "name": "Merchant Name",
 
-"postalCode": "94111",
+    "redirectUrl": "https://example.com",
 
-"state": "CA",
+    "metadata": {
+      "optionalField1": "optionalValue1"
+    }
+  },
 
-"region": ""
+  "avs": false,
 
+  "description": "Cycle Mitts, Tyre Repair Kit, Bike",
+
+  "paymentAmount": {
+    "amount": 500.89,
+
+    "currency": "GBP"
+  },
+
+  "expiresAt": "2022-02-22T22:10:47.720Z",
+
+  "basketTimestamp": "2022-02-22T22:00:47.720Z",
+
+  "metadata": {
+    "optionalField1": "optionalValue1"
+  }
 }
-
-},
-
-"merchant": {
-
-"id": "f41201ea-88e6-11ec-a8a3-0242ac120002",
-
-"name": "Merchant Name",
-
-"redirectUrl": "https://example.com",
-
-"metadata": {
-
-"optionalField1": "optionalValue1"
-
-}
-
-},
-
-"avs": false,
-
-"description": "Cycle Mitts, Tyre Repair Kit, Bike",
-
-"paymentAmount": {
-
-"amount": 500.89,
-
-"currency": "GBP"
-
-},
-
-"expiresAt": "2022-02-22T22:10:47.720Z",
-
-"basketTimestamp": "2022-02-22T22:00:47.720Z",
-
-"metadata": {
-
-"optionalField1": "optionalValue1"
-
-}
-
-}
+```
 
 - merchant.id will be provided by Tymit as part of the merchant registration process (see Merchant Registration section below)
 
