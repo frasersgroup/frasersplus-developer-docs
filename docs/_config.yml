@@ -10,7 +10,7 @@ remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-theme: minima # You can replace this with other supported themes
+##theme: minima # You can replace this with other supported themes
 
 # Markdown settings
 markdown: kramdown
