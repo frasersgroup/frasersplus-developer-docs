@@ -1,6 +1,6 @@
 # Basic settings
 title: F+ Developer Docs
-description: A site for developers showing how to implemnt the F+ API's
+description: A site for developers showing how to implement the F+ API's
 author: Frasers Group Financial Services
 #baseurl: "/my-site" # The repository name (optional, remove if not needed)
 url: "https://frasersgroup.github.io/frasersplus-developer-docs/" # Your GitHub Pages URL
@@ -20,19 +20,13 @@ plugins:
 
 # Navigation bar (Minima theme supports this)
 # Add links to other pages on your site or external sites
-navbar:
+nav:
   - title: "Home"
     url: /
   - title: "Pay"
     url: /pay/
   - title: "Loyalty"
     url: /loyalty/
-
-# Social media links (used with themes that support it)
-#social_links:
-#  twitter: your_twitter_handle
-#  github: yourusername
-#  linkedin: your-linkedin-profile
 
 # Exclude certain files or folders from being included in the site
 exclude:
