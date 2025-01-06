@@ -1,7 +1,7 @@
 # Basic settings
 title: F+ Developer Docs
 description: A site for developers showing how to implemnt the F+ API's
-#author: Your Name
+author: Frasers Group Financial Services
 #baseurl: "/my-site" # The repository name (optional, remove if not needed)
 url: "https://frasersgroup.github.io/frasersplus-developer-docs/" # Your GitHub Pages URL
 
