@@ -1,12 +1,14 @@
 <header class="site-header">
   <div class="header_header__g6W3D">
-    <a href="{{ '/' | relative_url }}" class="logo-link">
-      <div class="image-overlay-line" style="width: 310px; height: 38.333336px; transform: translate(88px, 40px);"><div class="image-overlay-text" style="transform: translate(-3151.25px, -492.83334px) scale(0.046881, 0.037435); -webkit-user-select: all;">FRASERSPLUS</div></div>
-    </a>
-    <div class="header_header__desktop_menu__ws8A7">
-      <a class="" href="{{ '/pay/' | relative_url }}">Pay</a>
-      <a class="" href="{{ '/loyalty/' | relative_url }}">Loyalty</a>
-      <a class="" href="{{ '/mock-values/' | relative_url }}">Mock Values</a>
+    <div class="header_logo-nav-container">
+      <a href="{{ '/' | relative_url }}" class="logo-link">
+        <img alt="Frasers Plus logo" width="114" height="30" src="{{ '/images/logos/frasersplus-logo-symbol.svg' | relative_url }}">
+      </a>
+      <div class="header_header__desktop_menu__ws8A7">
+        <a class="" href="{{ '/pay/' | relative_url }}">Pay</a>
+        <a class="" href="{{ '/loyalty/' | relative_url }}">Loyalty</a>
+        <a class="" href="{{ '/mock-values/' | relative_url }}">Mock Values</a>
+      </div>
     </div>
     <div class="header_header__menu_icon__eE5eO">
       <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-h8ze2w" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MenuIcon">
@@ -33,22 +35,16 @@
     margin: 0 auto;
   }
 
-  .logo-link {
-    text-decoration: none;
+  .header_logo-nav-container {
     display: flex;
     align-items: center;
   }
 
-  .logo-text {
-    color: white;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-
-  .logo-plus {
-    font-weight: 300;
+  .logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
   }
 
   .header_header__desktop_menu__ws8A7 {
