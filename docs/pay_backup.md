@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Payment Integration
-permalink: /pay/
+#layout: page
+#title: Payment Integration
+#permalink: /pay/
 ---
 
 The following sections describe and demonstrate the user flows and integration mechanisms with the **Frasers Plus** payment system.
