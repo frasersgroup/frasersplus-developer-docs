@@ -66,10 +66,6 @@ Merchants send transaction data (e-commerce & POS) to the Loyalty backend for po
 
 ### Reward Redemption API
 
-#### E-commerce
-
-API Documentation: [TBC](https://app.swaggerhub.com/apis/tymit/Tymit-cobrands-eCommerce-api/1.1.0#/Registration/post_cobrands_checkout_registration)
-
 ##### POST /redeem (AUTHORIZATION)
 
 *   **Purpose:** Authorize Reward payment.
