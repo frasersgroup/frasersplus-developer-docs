@@ -1,0 +1,85 @@
+<footer class="site-footer h-card">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <h2 class="footer-heading">{{ site.title | escape }}</h2>
+        <p>{{ site.description | escape }}</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/pay/' | relative_url }}">Pay</a></li>
+          <li><a href="{{ '/loyalty/' | relative_url }}">Loyalty</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="https://github.com/frasersgroup" target="_blank">GitHub</a></li>
+          <li><a href="https://frasersplus.com" target="_blank">F+ Website</a></li>
+          <li><a href="https://www.frasers.group/" target="_blank">Frasers Group</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; {{ 'now' | date: "%Y" }} Frasers Group Financial Services. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: #f5f5f5;
+    border-top: 1px solid #e8e8e8;
+    padding: 30px 0;
+    margin-top: 30px;
+  }
+  
+  .footer-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-col-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+  }
+  
+  .footer-col {
+    flex: 1;
+    padding-left: 15px;
+    min-width: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links a {
+    color: #424242;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #2a7ae2;
+    text-decoration: underline;
+  }
+  
+  .footer-legal {
+    margin-top: 20px;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 20px;
+    color: #828282;
+    font-size: 14px;
+    text-align: center;
+  }
+</style>
