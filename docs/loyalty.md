@@ -75,6 +75,7 @@ API Documentation: [TBC](https://app.swaggerhub.com/apis/tymit/Tymit-cobrands-eC
 *   **Purpose:** Authorize Reward payment.
 *   **URL:** `POST <https://brand.external.frasers.plus/redeem/v1/authorize>`
 
+**Request:**
 ```json
 {
   "loyaltyId": "A1B2C3D4E5",
@@ -85,34 +86,99 @@ API Documentation: [TBC](https://app.swaggerhub.com/apis/tymit/Tymit-cobrands-eC
   "currency": "GBP",
   "redemptionAmount": 1.23
 }
- 
-POST /redeem (CAPTURE) 
-Purpose: Capture authorized Reward payment (goods ready to ship).
-URL: POST <https://brand.external.frasers.plus/redeem/v1/capture> 
+```
+
+**Response:**
+```json
+{
+  "status": "SUCCESS",
+  "transactionId": "TXN123456789",
+  "authorizedAmount": 1.23,
+  "remainingBalance": 8.77,
+  "timestamp": "2025-03-24T13:27:07Z"
+}
+```
+
+##### POST /redeem (CAPTURE) 
+
+*   **Purpose:** Capture authorized Reward payment (goods ready to ship).
+*   **URL:** `POST <https://brand.external.frasers.plus/redeem/v1/capture>`
+
+**Request:**
+```json
 {
   "token": "3ZDKCbGXK3FGtscnX",
   "amount": 1.23
 }
- 
-POST /redeem (VOID) 
-Purpose: Cancel authorized Reward payment (e.g., product unavailable).
-URL: POST <https://brand.external.frasers.plus/redeem/v1/void> 
+```
+
+**Response:**
+```json
+{
+  "status": "SUCCESS",
+  "transactionId": "TXN123456789",
+  "capturedAmount": 1.23,
+  "remainingBalance": 8.77,
+  "timestamp": "2025-03-24T13:27:07Z"
+}
+```
+
+##### POST /redeem (VOID) 
+
+*   **Purpose:** Cancel authorized Reward payment (e.g., product unavailable).
+*   **URL:** `POST <https://brand.external.frasers.plus/redeem/v1/void>`
+
+**Request:**
+```json
 {
   "token": "3ZDKCbGXK3FGtscnX"
 }
- 
-POST /redeem (REFUND) 
-Purpose: Refund Reward payment (customer returned goods).
-URL: POST <https://brand.external.frasers.plus/redeem/v1/refund> 
+```
+
+**Response:**
+```json
+{
+  "status": "SUCCESS",
+  "transactionId": "TXN123456789",
+  "voidedAmount": 1.23,
+  "remainingBalance": 10.00,
+  "timestamp": "2025-03-24T13:27:07Z"
+}
+```
+
+##### POST /redeem (REFUND) 
+
+*   **Purpose:** Refund Reward payment (customer returned goods).
+*   **URL:** `POST <https://brand.external.frasers.plus/redeem/v1/refund>`
+
+**Request:**
+```json
 {
   "token": "3ZDKCbGXK3FGtscnX",
   "amount": 1.23
 }
- 
-Physical Stores (POS) 
-POST /redeem (AUTHORIZATION_CAPTURE) 
-Purpose: Authorize & Capture Reward payment simultaneously.
-URL: POST <https://brand.external.frasers.plus/redeem/v1/authCapture> 
+```
+
+**Response:**
+```json
+{
+  "status": "SUCCESS",
+  "transactionId": "TXN123456789",
+  "refundedAmount": 1.23,
+  "remainingBalance": 9.00,
+  "timestamp": "2025-03-24T13:27:07Z"
+}
+```
+
+#### Physical Stores (POS) 
+
+##### POST /redeem (AUTHORIZATION_CAPTURE) 
+
+*   **Purpose:** Authorize & Capture Reward payment simultaneously.
+*   **URL:** `POST <https://brand.external.frasers.plus/redeem/v1/authCapture>`
+
+**Request:**
+```json
 {
   "loyaltyId": "A1B2C3D4E5",
   "pin": "1111",
@@ -122,3 +188,16 @@ URL: POST <https://brand.external.frasers.plus/redeem/v1/authCapture>
   "currency": "GBP",
   "redemptionAmount": 1.23
 }
+```
+
+**Response:**
+```json
+{
+  "status": "SUCCESS",
+  "transactionId": "TXN123456789",
+  "authorizedAmount": 1.23,
+  "capturedAmount": 1.23,
+  "remainingBalance": 8.77,
+  "timestamp": "2025-03-24T13:27:07Z"
+}
+```
