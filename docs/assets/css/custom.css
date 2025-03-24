@@ -1,0 +1,39 @@
+/* Custom styles for F+ Developer Docs */
+
+/* Make header and footer full width */
+.site-header,
+.site-footer {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Keep the header and footer content constrained */
+.header_header__g6W3D,
+.site-footer .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+}
+
+/* Make sure the page content stays constrained */
+.page-content .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header_header__g6W3D,
+  .site-footer .wrapper,
+  .page-content .wrapper {
+    padding: 15px 20px;
+  }
+}
+
+/* Fix for potential wrapper issues with the minima theme */
+body {
+  overflow-x: hidden;
+}
