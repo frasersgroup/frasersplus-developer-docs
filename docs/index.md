@@ -8,52 +8,6 @@ permalink: /
   Frasers plus developer documentation
 </div>
 
-# Frasers Plus - Partnerships Integration Handbook
-
-| Contents                                                              |
-| --------------------------------------------------------------------- |
-| [Document Version Control](#document-version-control)                 |
-| [Introduction](#introduction)                                         |
-| [Stakeholders Clients and Systems](#stakeholders-clients-and-systems) |
-| [Payment Integration](#payment-integration)                           |
-| [Business Flows](#business-flows)                                     |
-| [E-commerce Payment](#e-commerce-payment)                             |
-| [In-store Payment (POS)](#in-store-payment-pos)                       |
-| [API Integrations](#api-integrations)                                 |
-| [E-commerce Payment API](#e-commerce-payment-api)                     |
-| [POS Payment API](#pos-payment-api)                                   |
-| [Mock API & “Magic Values”](#mock-api--magic-values)                  |
-| [Full Sequence diagrams](#full-sequence-diagrams)                     |
-| [E-comm flows](#e-comm-flows)                                         |
-| [POS Flow](#pos-flow)                                                 |
-| [Merchant Registration/Onboarding](#merchant-registrationonboarding)  |
-| [Onboard Merchant Fascia](#onboard-merchant-fascia)                   |
-| [Security summary](#security-summary)                                 |
-| [Webhook security](#webhook-security)                                 |
-| [Authentication Type](#authentication-type)                           |
-| [How to Test an Integration](#how-to-test-an-integration)             |
-| [Development/Unit Testing](#developmentunit-testing)                  |
-| [Staging](#staging)                                                   |
-| [How to Promote to Production](#how-to-promote-to-production)         |
-| [Loyalty Integration](#loyalty-integration)                           |
-| [Business Flows](#business-flows-1)                                   |
-| [Tracking Purchases](#tracking-purchases)                             |
-| [Reward Redemption](#reward-redemption)                               |
-| [API Integration](#api-integration)                                   |
-| [Reward Redemption API](#reward-redemption-api)                       |
-| [Appendices](#appendices)                                             |
-| [Glossary of Terms](#glossary-of-terms)                               |
-
-# Document Version Control
-
-| Version Number | Description                                                      | Issued by                  | Date Issued |
-| -------------- | ---------------------------------------------------------------- | -------------------------- | ----------- |
-| V0.9           | Document includes required detail for Payment Integration.       | Lisa Hay                   | 04/03/2024  |
-| V1.0           | Document reviewed for 1st release                                | Ian Stacey & Chris Balchin | 08/03/2024  |
-| V1.1           | Document reviewed and updated, “magic values” in Mock API added. | Ian Stacey                 | 26/04/2024  |
-| V1.2           | Loyalty Transaction payload updated including descriptions       | Lisa Hay                   | 04/06/2024  |
-| V1.3           | Updated to include references to webhooks for Pay.               | Ian Stacey                 | 05/11/2024  |
-| V1.3.1         | Update links to reference DI                                     | Khole Jones                | 18/12/2024  |
 
 # Introduction
 
