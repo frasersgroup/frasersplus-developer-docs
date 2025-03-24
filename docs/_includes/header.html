@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="header_header__g6W3D">
-    <a href="{{ '/' | relative_url }}">
-      <img alt="Frasers Plus logo" loading="eager" width="114" height="30" decoding="async" style="color:transparent" src="{{ '/images/logos/frasersplus-logo-symbol.svg' | relative_url }}">
+    <a href="{{ '/' | relative_url }}" class="logo-link">
+      <span class="logo-text">FRASERS<span class="logo-plus">PLUS</span></span>
     </a>
     <div class="header_header__desktop_menu__ws8A7">
       <a class="" href="{{ '/pay/' | relative_url }}">Pay</a>
@@ -18,9 +18,10 @@
 
 <style>
   .site-header {
-    border-bottom: 1px solid #e8e8e8;
+    background-color: #1a0033; /* Dark purple/navy background color */
     min-height: 55px;
     position: relative;
+    border-bottom: none;
   }
 
   .header_header__g6W3D {
@@ -32,24 +33,46 @@
     margin: 0 auto;
   }
 
+  .logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-text {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .logo-plus {
+    font-weight: 300;
+  }
+
   .header_header__desktop_menu__ws8A7 {
     display: flex;
     gap: 30px;
   }
 
   .header_header__desktop_menu__ws8A7 a {
-    color: #333;
+    color: white;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
   }
 
   .header_header__desktop_menu__ws8A7 a:hover {
-    color: #2a7ae2;
+    color: #ccc;
   }
 
   .header_header__menu_icon__eE5eO {
     display: none;
+  }
+
+  .header_header__menu_icon__eE5eO svg {
+    fill: white;
   }
 
   @media (max-width: 600px) {
