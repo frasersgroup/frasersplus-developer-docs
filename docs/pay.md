@@ -72,9 +72,22 @@ POST https://{environment-url}/v1/payment
 }
 ```
 
+**Response Example:**
+```json
+{
+    "uniquePaymentReference": "5ef7f11d-e7b9-4c64-962d-8e77f274a7b9",
+    "redirectUrl": "https://frasersplusweb.staging.tymit.com/checkout-payment?sessionId=-_cr3DsC3i0Z3Q5JU8aIMQQz74jgsIuz4GdL_J3K62fZtmOq69FbebK-5o6qiYnJ",
+    "metadata": {
+        "customer": {
+            "loyaltyId": "FLWC5Y22MH"
+        }
+    }
+}
+```
+
 ### Webhooks
 
-If configured, **Frasers Plus** sends webhook notifications to the merchant’s backend.
+**Frasers Plus** sends webhook notifications to the merchant’s backend.
 
 **Webhook Example:**
 ```json
@@ -102,11 +115,22 @@ PUT https://{environment-url}/v1/payment/{uniquePaymentReference}
 **Request Example:**
 ```json
 {
-  "type": "CAPTURE",
+  "type": "<CAPTURE/REVERSAL/CREDIT>",
   "paymentAmount": {
     "amount": 500.89,
     "currency": "GBP"
   }
+}
+```
+
+**Response Example:**
+```json
+{
+    "metadata": {
+        "customer": {
+            "loyaltyId": "FLWC5Y22MH"
+        }
+    }
 }
 ```
 
