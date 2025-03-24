@@ -25,6 +25,27 @@
     <div class="footer-legal">
       <p>&copy; {{ 'now' | date: "%Y" }} Frasers Group Financial Services. All rights reserved.</p>
     </div>
+    <div class="footer-regulatory">
+      <div class="footer-regulatory-column">
+        <p>Frasers Plus is a credit product provided by Frasers Group Financial Services Limited which is authorised and regulated by the Financial Conduct Authority for insurance distribution and consumer credit activities as lender (FRN 311908) and a member of the Finance and Leasing Association.&nbsp;&nbsp;Terms Apply.&nbsp;&nbsp;<span class="bold">Missed payments may affect your credit score.</span></p>
+        <p>Frasers Group Financial Services Limited is a company registered in England and Wales (No 00718151). Registered address: Express House, Petre Road, Clayton Business Park, Accrington, Lancashire, BB5 5JB.</p>
+        <p class="footer-links-sub">
+          &copy; Frasers Group Financial Services Limited&nbsp;
+          <a class="footer-link" target="_blank" title="Privacy Policy" href="https://fgsupporthelp.zendesk.com/hc/en-gb/articles/22096878001693">Privacy Policy</a>&nbsp;
+          <a class="footer-link" target="_blank" title="Regulated Complaints" href="https://fgsupporthelp.zendesk.com/hc/en-gb/articles/21662914126109">Regulated Complaints</a>&nbsp;
+          <a class="footer-link" target="_blank" title="Complaints Policy" href="https://fgsupporthelp.zendesk.com/hc/en-gb/articles/10600906212509-How-can-I-make-a-complaint">Complaints Policy</a>&nbsp;
+          <a class="footer-link" target="_blank" title="Cookies" href="https://fgsupporthelp.zendesk.com/hc/en-gb/articles/22093422839197">Cookie Policy</a>
+        </p>
+      </div>
+      <div class="footer-regulatory-column">
+        <p>For regulated payment services, Frasers Group Financial Services Limited is a payment agent of Transact Payments Limited, a company authorised and regulated by the Gibraltar Financial Services Commission as an electronic money institution. Transact Payments Limited, a company incorporated in Gibraltar (No 108217). Registered address 6.20 World Trade Center. 6 Bayside Road. Gibraltar. GX11 1AA.</p>
+        <p class="footer-links-sub">
+          This site is protected by reCAPTCHA Enterprise and the Google&nbsp;
+          <a class="footer-link" target="_blank" title="Google Privacy Policy" href="https://policies.google.com/privacy">Privacy Policy</a>&nbsp;and&nbsp;
+          <a class="footer-link" target="_blank" title="Google Terms &amp; Conditions" href="https://policies.google.com/terms">Terms of Service</a>&nbsp;apply.
+        </p>
+      </div>
+    </div>
   </div>
 </footer>
 
@@ -81,5 +102,49 @@
     color: #828282;
     font-size: 14px;
     text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* New styles for regulatory content */
+  .footer-regulatory {
+    margin-top: 20px;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-regulatory-column {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .footer-regulatory-column p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .footer-links-sub {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .footer-link {
+    color: #2a7ae2;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 12px;
+  }
+  
+  .footer-link:hover {
+    color: #1756a9;
+    text-decoration: underline;
   }
 </style>
