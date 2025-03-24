@@ -13,23 +13,23 @@ permalink: /
 
 In this document you will find guides and API reference documentation to integrate your business with _Frasers Plus_ product.
 
-## Stakeholders Clients and Systems
+ [Payment Integration](/pay/)  
+ [Loyalty Integration](/loyalty/)   
+
+
+## Key Terms of Reference
 
 - **Customer**: end customers who buy products from the merchant e-commerce or stores.
 
-- **Merchant e-commerce Web**: merchant website (e-commerce) where customers are adding products to the basket to later pay with Frasers Plus system. Technically this is the front end of the merchant e-commerce.
+- **Merchant e-commerce Web/App**: merchant website (e-commerce) where customers are adding products to the basket to later pay with Frasers Plus system. Technically this is the front end of the merchant e-commerce.
 
-- **Merchant Backend**: this is the backend of the merchant. It interacts with the Merchant e-commerce and Tymit Backend in order to process the different requests, i.e. payments.
+- **Frasers Plus App**: Customers interact with this app in order to manage purchases, instalments, loyalty points, pay with QR code in stores, approve purchases, etc.
 
-- **Frasers Plus App (built by Tymit)**: this is the app built by Tymit and customised for Frasers. Customers interact with this app in order to manage purchases, instalments, loyalty points, pay with QR code in stores, approve purchases, etc.
-
-- **Frasers Plus HPP** **(built by Tymit)**: this is the _Hosted Payment Page_ built by Tymit and customised for Frasers. It is a web site that manages all customer interactions to verify identity, onBoard new customers and wating for the customer to approve the purchase order.
-
-- **Tymit Backend**: this is the Tymit system which manages all the on-boardings, payment methods (like QR), purchases, loyalty, etc. It interacts with Merchant Backend, **Frasers Plus App** and **Frasers Plus HPP**.
+- **Frasers Plus HPP**: It is a web site that manages all customer interactions to verify identity, onBoard new customers and wating for the customer to approve the purchase order.
 
 ![](assets/images/pay/Picture1.png)
 
-_A_ [_Glossary of Terms_](#glossary-of-terms) _is available at the end of this document._
+[_Glossary of Terms_](#glossary-of-terms) _is available at the end of this document._
 
 # Appendices
 
