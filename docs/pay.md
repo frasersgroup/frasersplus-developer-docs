@@ -110,19 +110,21 @@ PUT https://{environment-url}/v1/payment/{uniquePaymentReference}
 }
 ```
 
+**Considerations:**
+- Ensure requests for **CAPTURE** and **REVERSAL** are linked to valid authorizations.
+- Refunds (**CREDIT**) should not exceed the original transaction amount.
+
 ## Security Considerations
 
 | **API**   | **WAF Perimeter Security** | **API Inner Security**   |
 | --------- | -------------------------- | ------------------------ |
-| ECommerce | IP Whitelisting            | **API Key** / Fascia     |
+| ECommerce | IP Whitelisting            | **API Key** / Brand     |
 | POS       | IP Whitelisting            | **API Key**              |
 
 ### Webhook Security
 
 - Webhooks must include a shared key for authentication.
-- IP addresses for webhook origins:
-  - **Staging**: 3.121.132.125, 52.215.99.246
-  - **Production**: 3.8.74.182, 3.11.167.29
+- Whitelisting **Frasers Plus** IP ranges is optional and can be requested if required.
 
 ## Testing & Deployment
 
@@ -133,7 +135,7 @@ PUT https://{environment-url}/v1/payment/{uniquePaymentReference}
 ### Staging
 
 - Obtain staging API credentials.
-- Access the **Frasers Plus** TestFlight app.
+- Access the **Frasers Plus** TestFlight/Google Play Beta app.
 - Ensure firewall rules allow API access.
 
 ### Production Deployment
