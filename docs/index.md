@@ -29,10 +29,6 @@ In this document you will find guides and API reference documentation to integra
 
 ![](assets/images/pay/Picture1.png)
 
-[_Glossary of Terms_](#glossary-of-terms) _is available at the end of this document._
-
-# Appendices
-
 ## Glossary of Terms
 
 - Fascia: group of stores.
