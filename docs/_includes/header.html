@@ -1,0 +1,65 @@
+<header class="site-header">
+  <div class="header_header__g6W3D">
+    <a href="{{ '/' | relative_url }}">
+      <img alt="Frasers Plus logo" loading="eager" width="114" height="30" decoding="async" style="color:transparent" src="{{ '/images/logos/frasersplus-logo-symbol.svg' | relative_url }}">
+    </a>
+    <div class="header_header__desktop_menu__ws8A7">
+      <a class="" href="{{ '/pay/' | relative_url }}">Pay</a>
+      <a class="" href="{{ '/loyalty/' | relative_url }}">Loyalty</a>
+      <a class="" href="{{ '/mock-values/' | relative_url }}">Mock Values</a>
+    </div>
+    <div class="header_header__menu_icon__eE5eO">
+      <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-h8ze2w" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MenuIcon">
+        <path d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"></path>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 55px;
+    position: relative;
+  }
+
+  .header_header__g6W3D {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header_header__desktop_menu__ws8A7 {
+    display: flex;
+    gap: 30px;
+  }
+
+  .header_header__desktop_menu__ws8A7 a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .header_header__desktop_menu__ws8A7 a:hover {
+    color: #2a7ae2;
+  }
+
+  .header_header__menu_icon__eE5eO {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .header_header__desktop_menu__ws8A7 {
+      display: none;
+    }
+    
+    .header_header__menu_icon__eE5eO {
+      display: block;
+      cursor: pointer;
+    }
+  }
+</style>
