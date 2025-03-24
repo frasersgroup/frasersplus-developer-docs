@@ -64,6 +64,30 @@ Merchants send transaction data (e-commerce & POS) to the Loyalty backend for po
 | tax                     | Total Order Tax (local currency)             | Required | number |
 | total                   | Total Order Value (local currency, incl tax) | Required | number |
 
+### Analytics Integration with Segment
+
+Segment is used to track customer interactions and loyalty events across our platform. Here's how to implement tracking:
+
+#### Available Libraries
+- **Web/JavaScript**: Use `analytics.js` library
+  ```javascript
+  analytics.track('Order Complete', {
+    loyalty_id: 'user123',
+    points: 100,
+    order_id: 'ORDER123'
+  });
+  ```
+
+- **Server-Side**: Libraries for Node.js, Python, Ruby, Java, PHP, and .NET
+
+#### Key Events to Track
+- `Order Complete`
+- `Order Refund`
+
+
+For a list of supporting libraries, refer to [Segment Libraries](https://segment.com/docs/connections/sources/catalog/).
+For detailed implementation (Javascript Example), refer to [Segment's documentation](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/).
+
 ### Reward Redemption API
 
 ##### POST /redeem (AUTHORIZATION)
@@ -196,4 +220,3 @@ Merchants send transaction data (e-commerce & POS) to the Loyalty backend for po
   "remainingBalance": 8.77,
   "timestamp": "2025-03-24T13:27:07Z"
 }
-```
