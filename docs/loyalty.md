@@ -36,10 +36,10 @@ Merchants send transaction data (e-commerce & POS) to the Loyalty backend for po
 
 ### Transaction API
 
-*   **Purpose:**  Send transaction data (Order Complete, Refund, etc.) for points calculation.
+*   **Purpose:**  Send transaction data (Order Completed, Order Refunded) for points calculation.
 *   **Contact:** FGFS for field mapping & data sending method (batch preferred).
 
-#### Example: Order Complete Tracking Plan
+#### Example: Tracking Plan
 
 | Property Name           | Description                                  | Status   | Type   |
 | :---------------------- | :------------------------------------------- | :------- | :----- |
@@ -71,7 +71,7 @@ Segment is used to track customer interactions and loyalty events across our pla
 #### Available Libraries
 - **Web/JavaScript**: Use `analytics.js` library
   ```javascript
-  analytics.track('Order Complete', {
+  analytics.track('Order Completed', {
     loyalty_id: 'user123',
     points: 100,
     order_id: 'ORDER123'
@@ -81,8 +81,8 @@ Segment is used to track customer interactions and loyalty events across our pla
 - **Server-Side**: Libraries for Node.js, Python, Ruby, Java, PHP, and .NET
 
 #### Key Events to Track
-- `Order Complete`
-- `Order Refund`
+- `Order Completed`
+- `Order Refunded`
 
 
 For a list of supporting libraries, refer to [Segment Libraries](https://segment.com/docs/connections/sources/catalog/).

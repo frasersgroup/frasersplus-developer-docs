@@ -3,7 +3,6 @@ title: F+ Developer Docs
 description: A site for developers showing how to implemnt the F+ API's
 author:
   name: Frasers Group Financial Services
-#baseurl: "/my-site" # The repository name (optional, remove if not needed)
 url: "https://frasersgroup.github.io/frasersplus-developer-docs/" # Your GitHub Pages URL
 
 # Google Analytics
@@ -38,16 +37,6 @@ navbar:
     url: /pay/
   - title: "Loyalty"
     url: /loyalty/
-
-header_pages:
-  - pay.md
-  - loyalty.md
-
-# Social media links (used with themes that support it)
-#social_links:
-#  twitter: your_twitter_handle
-#  github: yourusername
-#  linkedin: your-linkedin-profile
 
 # Exclude certain files or folders from being included in the site
 exclude:
