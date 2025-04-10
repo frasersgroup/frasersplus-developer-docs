@@ -220,3 +220,4 @@ For detailed implementation (Javascript Example), refer to [Segment's documentat
   "remainingBalance": 8.77,
   "timestamp": "2025-03-24T13:27:07Z"
 }
+```
